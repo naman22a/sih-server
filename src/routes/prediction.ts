@@ -5,7 +5,7 @@ import path from 'path';
 
 function fileFilter(_req: Request, file: File | any, cb: FileFilterCallback) {
     // Allowed extensions
-    const filetypes = /jpeg|jpg|png|gif|webp/;
+    const filetypes = /jpeg|jpg|png|gif/;
 
     // Check extension
     const extname = filetypes.test(
@@ -17,7 +17,7 @@ function fileFilter(_req: Request, file: File | any, cb: FileFilterCallback) {
     if (mimetype && extname) {
         return cb(null, true);
     } else {
-        cb(Error('jpeg, jpg, png, gif and webp images only'));
+        cb(Error('only jpeg, jpg, png and gif image formats are supported'));
     }
 }
 
