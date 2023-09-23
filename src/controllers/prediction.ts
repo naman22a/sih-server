@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as tf from '@tensorflow/tfjs-node';
 import { PredictionResponse } from '../interfaces';
-import { maxArgs } from '../utils';
+import { maxArgs,formatName } from '../utils';
 import { INTERNAL_SERVER_ERROR, plants, plantsMap } from '../constants';
 
 let model: tf.LayersModel | undefined;
@@ -53,24 +53,18 @@ export const postPrediction = async (req: Request, res: Response) => {
         // get plant details
         const data = plantsMap[name];
 
-        // if plants details not found then
+          // if plants details not found then
         if (!data) {
             return res.send({
                 data: {
-                    name: name
-                        .split('_')
-                        .map(
-                            (word) =>
-                                word.charAt(0).toUpperCase() + word.slice(1)
-                        )
-                        .join(' '),
+                    name: formatName(name),
                     uses: []
                 }
             } satisfies PredictionResponse);
         }
 
         return res.send({
-            data: data
+            data: { ...data, name: `${formatName(name)}(${data.name})` }
         } satisfies PredictionResponse);
     } catch (error) {
         console.error(error);
