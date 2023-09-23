@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as tf from '@tensorflow/tfjs-node';
 import { PredictionResponse } from '../interfaces';
-import { maxArgs,formatName } from '../utils';
+import { maxArgs, formatName } from '../utils';
 import { INTERNAL_SERVER_ERROR, plants, plantsMap } from '../constants';
 
 let model: tf.LayersModel | undefined;
