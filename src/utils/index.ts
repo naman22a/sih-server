@@ -12,3 +12,10 @@ export const maxArgs = (nums: number[]): number => {
 
     return index;
 };
+
+export const formatName = (name: string) => {
+    return name
+        .split('_')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+};
