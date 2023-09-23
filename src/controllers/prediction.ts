@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as tf from '@tensorflow/tfjs-node';
 import { PredictionResponse } from '../interfaces';
 import { maxArgs } from '../utils';
-import { INTERNAL_SERVER_ERROR, plants } from '../constants';
+import { INTERNAL_SERVER_ERROR, plants, plantsMap } from '../constants';
 
 let model: tf.LayersModel | undefined;
 const MODEL_PATH = `file://src/ai/model/model.json`;
@@ -21,7 +21,7 @@ export const postPrediction = async (req: Request, res: Response) => {
         const image = req.file;
         if (!image) {
             return res.send({
-                data: '',
+                data: null,
                 errors: [{ field: 'image', message: 'Please upload an image' }]
             } satisfies PredictionResponse);
         }
@@ -48,15 +48,34 @@ export const postPrediction = async (req: Request, res: Response) => {
         const maxIndex = maxArgs(indices);
 
         // get the string from plants array by passing the index
-        const prediction = plants[maxIndex];
+        const name = plants[maxIndex];
+
+        // get plant details
+        const data = plantsMap[name];
+
+        // if plants details not found then
+        if (!data) {
+            return res.send({
+                data: {
+                    name: name
+                        .split('_')
+                        .map(
+                            (word) =>
+                                word.charAt(0).toUpperCase() + word.slice(1)
+                        )
+                        .join(' '),
+                    uses: []
+                }
+            } satisfies PredictionResponse);
+        }
 
         return res.send({
-            data: prediction
+            data: data
         } satisfies PredictionResponse);
     } catch (error) {
         console.error(error);
         return res.send({
-            data: '',
+            data: null,
             errors: [INTERNAL_SERVER_ERROR]
         } satisfies PredictionResponse);
     }

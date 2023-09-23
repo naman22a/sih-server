@@ -4,6 +4,11 @@ export interface FieldError {
 }
 
 export interface PredictionResponse {
-    data: string;
+    data: PlantDetails | null;
     errors?: FieldError[];
+}
+
+export interface PlantDetails {
+    name: string;
+    uses: string[];
 }
