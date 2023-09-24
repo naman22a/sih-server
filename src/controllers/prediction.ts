@@ -32,9 +32,9 @@ export const postPrediction = async (req: Request, res: Response) => {
         // convert image into tensor image
         const tfImage = tf.node.decodeImage(image.buffer);
 
-        // resize image to 256x256 dimensions
+        // resize image to 224x224 dimensions
         const resizedImage = tf.expandDims(
-            tf.image.resizeNearestNeighbor(tfImage, [256, 256]),
+            tf.image.resizeNearestNeighbor(tfImage, [224, 224]),
             0
         );
 
