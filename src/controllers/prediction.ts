@@ -53,11 +53,12 @@ export const postPrediction = async (req: Request, res: Response) => {
         // get plant details
         const data = plantsMap[name];
 
-          // if plants details not found then
+        // if plants details not found then
         if (!data) {
             return res.send({
                 data: {
                     name: formatName(name),
+                    origin: 'Unknown',
                     uses: []
                 }
             } satisfies PredictionResponse);

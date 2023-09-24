@@ -10,5 +10,6 @@ export interface PredictionResponse {
 
 export interface PlantDetails {
     name: string;
+    origin: string;
     uses: string[];
 }

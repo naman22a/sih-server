@@ -188,22 +188,25 @@ export const plants = [
 export const plantsMap: Record<string, PlantDetails> = {
     ulmus_rubra: {
         name: 'Slippery elm',
+        origin: 'North America',
+        uses: [
+            'Leaves - raw or cooked. Used as a potherb',
+            'Inner bark - cooked. It can be dried and made into noodles',
+            'The dried inner bark can also be ground into a powder and then used as a thickener in soups or added to cereal flours when making bread etc.'
+        ]
+    },
+    ulmus_pumila: {
+        name: 'Ulmus Pumlia',
+        origin: 'China',
         uses: [
             'Skin conditions: Slippery Elm is believed to be able to treat various skin conditions when applied topically',
             'Sore throat: Due to its natural demulcent properties, Slippery Elm is thought to soothe a sore throat by coating the lining of the throat and esophagus.',
             'Constipation: Slippery Elm may help relieve constipation.'
         ]
     },
-    ulmus_pumila: {
-        name: 'Siberian elm',
-        uses: [
-            'Leaves - raw or cooked[105, 177, 183]. Used as a potherb',
-            'Inner bark - cooked. It can be dried and made into noodles',
-            'The dried inner bark can also be ground into a powder and then used as a thickener in soups or added to cereal flours when making bread etc.'
-        ]
-    },
     acer_rubrum: {
         name: 'Red Maple',
+        origin: 'United States and Canada',
         uses: [
             'Anti-Inflammatory: The bark of Acer rubrum has been traditionally used in herbal medicine for its anti-inflammatory properties',
             'Antioxidant: Red Maple leaves contain compounds like phenolic acids and flavonoids, which have antioxidant properties.',
@@ -212,6 +215,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     broussonettia_papyrifera: {
         name: 'Paper Mulberry',
+        origin: 'China',
         uses: [
             'Anti-Inflammatory: The leaves and bark of Paper Mulberry contain compounds with anti-inflammatory properties',
             'Analgesic: Some traditional herbal remedies use Paper Mulberry extracts for their potential analgesic (pain-relieving) properties.',
@@ -220,6 +224,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     ptelea_trifoliata: {
         name: 'Common Hoptree',
+        origin: 'United States',
         uses: [
             'Digestive Aid: The bark and fruit of Ptelea trifoliata have been traditionally used in herbal medicine as a digestive aid.',
             'Antispasmodic: Common Hoptree is known for its antispasmodic properties, which means it can help relieve muscle spasms and cramps.',
@@ -228,6 +233,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     liriodendron_tulipifera: {
         name: 'Tulip Tree',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Liriodendron tulipifera has a history of use in traditional medicine. Various parts of the tree, including the bark, leaves, and flowers, have been used for their potential medicinal properties.',
             'Anti-Inflammatory: Some traditional remedies utilize extracts from the Tulip Tree for their anti-inflammatory properties, which may help reduce inflammation and related discomfort.',
@@ -236,6 +242,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     quercus_marilandica: {
         name: 'Blackjack Oak',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Quercus marilandica has a history of use in traditional medicine. Various parts of the tree, including the bark and leaves, have been used for their potential medicinal properties.',
             'Astringent: The bark of the Blackjack Oak is known for its astringent properties. Astringents can tighten and constrict tissues and have been used topically for conditions like minor wounds.',
@@ -244,6 +251,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     picea_abies: {
         name: 'Norway Spruce',
+        origin: 'Norway, Sweden, and Finland',
         uses: [
             'Traditional Medicine: Picea abies has a history of use in traditional medicine. Various parts of the tree, including the bark and needles, have been used for their potential medicinal properties.',
             'Respiratory Health: The needles of the Norway Spruce can be used to make teas or inhalations that may support respiratory health and alleviate symptoms of coughs and colds.',
@@ -252,6 +260,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     magnolia_stellata: {
         name: 'Star Magnolia',
+        origin: 'Japan',
         uses: [
             'Traditional Medicine: Magnolia stellata has a history of use in traditional medicine. Various parts of the plant, including the bark and flowers, have been used for their potential medicinal properties.',
             'Anti-Inflammatory: Some traditional remedies utilize extracts from the Star Magnolia for their anti-inflammatory properties, which may help reduce inflammation and related discomfort.',
@@ -260,6 +269,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     oxydendrum_arboreum: {
         name: 'Sourwood',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Oxydendrum arboreum has been used in traditional medicine for its potential health benefits. Various parts of the plant, including the leaves and bark, have been used.',
             'Honey Production: The nectar from Sourwood flowers is highly valued by beekeepers and is used to produce a distinctive and flavorful Sourwood honey.',
@@ -268,6 +278,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     cedrus_libani: {
         name: 'Cedar of Lebanon',
+        origin: 'Lebanon',
         uses: [
             'Traditional Uses: Cedrus libani has a history of use in traditional medicine. Various parts of the tree, including the resin, have been used for their potential medicinal properties.',
             'Timber and Aromatic Wood: The wood of Cedar of Lebanon is highly valued for its durability and aromatic properties. It has been used in construction and woodworking for centuries.',
@@ -276,6 +287,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     populus_deltoides: {
         name: 'Eastern Cottonwood',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Populus deltoides has been used in traditional medicine for its potential medicinal properties. Various parts of the tree, including the bark and buds, have been utilized.',
             'Shelter and Erosion Control: The rapid growth of Eastern Cottonwood makes it useful for providing shade and windbreaks. Its roots also help stabilize soil along riverbanks.',
@@ -284,6 +296,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     liquidambar_styraciflua: {
         name: 'Sweetgum',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Liquidambar styraciflua has a history of use in traditional medicine. Various parts of the tree, including the resin, have been used for their potential health benefits.',
             'Gum Production: The resin of Sweetgum is known as "sweet gum" and has been used for chewing gum and other products.',
@@ -292,6 +305,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     salix_matsudana: {
         name: 'Chinese Willow',
+        origin: 'China',
         uses: [
             'Traditional Medicine: Salix matsudana has a history of use in traditional medicine. Various parts of the tree, including the bark and leaves, have been used for their potential medicinal properties.',
             'Erosion Control: Chinese Willow is often planted for erosion control along riverbanks and other areas prone to soil erosion.',
@@ -300,6 +314,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     chamaecyparis_thyoides: {
         name: 'Atlantic White Cedar',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Chamaecyparis thyoides has been used in traditional medicine for its potential medicinal properties. Various parts of the tree, including the leaves and wood, have been utilized.',
             'Wetland Ecosystems: Atlantic White Cedar plays a crucial role in wetland ecosystems, helping to improve water quality and providing habitat for wildlife.',
@@ -308,6 +323,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     cornus_mas: {
         name: 'Cornelian Cherry',
+        origin: 'Europe',
         uses: [
             'Traditional Medicine: Cornus mas has a history of use in traditional medicine. The fruit and bark have been used for their potential medicinal properties.',
             'Edible Fruit: The fruit of the Cornelian Cherry is edible and is often used in jams, preserves, and beverages due to its tart flavor.',
@@ -316,6 +332,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     quercus_macrocarpa: {
         name: 'Bur Oak',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Quercus macrocarpa has been used in traditional medicine. Various parts of the tree, including the bark and acorns, have been used for their potential medicinal properties.',
             'Wildlife Habitat: Bur Oak provides valuable habitat and food for wildlife, including deer and various bird species.',
@@ -324,6 +341,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     pinus_densiflora: {
         name: 'Japanese Red Pine',
+        origin: 'Japan',
         uses: [
             'Traditional Medicine: Pinus densiflora has a history of use in traditional medicine. Various parts of the tree, including the resin and needles, have been used for their potential medicinal properties.',
             'Ornamental and Bonsai: Japanese Red Pine is highly valued for its ornamental appearance and is often used in landscaping and for bonsai cultivation.',
@@ -332,6 +350,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     pinus_rigida: {
         name: 'Pitch Pine',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Pinus rigida has been used in traditional medicine. Various parts of the tree, including the resin, have been used for their potential medicinal properties.',
             'Timber and Naval Use: Pitch Pine wood was historically used in shipbuilding, particularly for its resinous properties. It was a valuable source of pitch and tar.',
@@ -340,6 +359,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     nyssa_sylvatica: {
         name: 'Black Gum',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Nyssa sylvatica has a history of use in traditional medicine. Various parts of the tree, including the bark, leaves, and twigs, have been used for their potential medicinal properties.',
             'Wildlife Habitat: Black Gum is important for wildlife habitat and provides food for birds and other wildlife species.',
@@ -348,6 +368,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     aesculus_glabra: {
         name: 'Ohio Buckeye',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Aesculus glabra has been used in traditional medicine. Various parts of the tree, including the bark and seeds, have been used for their potential medicinal properties.',
             'Ornamental and Shade: Ohio Buckeye is appreciated for its ornamental value and is sometimes planted for its shade-providing canopy.',
@@ -356,6 +377,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     quercus_nigra: {
         name: 'Water Oak',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Quercus nigra has been used in traditional medicine. Various parts of the tree, including the bark and leaves, have been used for their potential medicinal properties.',
             'Lumber and Wood Products: The wood of Water Oak is used in various applications, including furniture and flooring.',
@@ -364,6 +386,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     pinus_pungens: {
         name: 'Table Mountain Pine',
+        origin: 'Canada',
         uses: [
             'Traditional Medicine: Pinus pungens has been used in traditional medicine. Various parts of the tree, including the resin and needles, have been used for their potential medicinal properties.',
             'Wildlife Habitat: Table Mountain Pine provides important wildlife habitat and food for various wildlife species.',
@@ -372,6 +395,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     quercus_shumardii: {
         name: 'Shumard Oak',
+        origin: 'North Korea',
         uses: [
             'Traditional Medicine: Quercus shumardii has been used in traditional medicine. Various parts of the tree, including the bark and acorns, have been used for their potential medicinal properties.',
             'Timber and Shade: Shumard Oak is appreciated for its timber value and is also planted for its shade-providing canopy.',
@@ -380,6 +404,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     amelanchier_canadensis: {
         name: 'Canadian Serviceberry',
+        origin: 'Canada',
         uses: [
             'Traditional Medicine: Amelanchier canadensis has a history of use in traditional medicine. The fruit and bark have been used for their potential medicinal properties.',
             'Edible Fruit: The fruit of the Canadian Serviceberry is edible and is used in various culinary applications, including pies and jams.',
@@ -388,6 +413,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     carya_ovata: {
         name: 'Shagbark Hickory',
+        origin: 'United States',
         uses: [
             'Traditional Medicine: Carya ovata has been used in traditional medicine. Various parts of the tree, including the bark and nuts, have been used for their potential medicinal properties.',
             'Edible Nuts: Shagbark Hickory produces edible nuts that are sometimes used in cooking and baking.',
@@ -396,6 +422,7 @@ export const plantsMap: Record<string, PlantDetails> = {
     },
     acer_pensylvanicum: {
         name: 'Moosewood',
+        origin: 'Finland',
         uses: [
             'Traditional Medicine: Acer pensylvanicum has been used in traditional medicine. Various parts of the tree, including the bark and leaves, have been used for their potential medicinal properties.',
             'Ornamental: Moosewood is valued for its ornamental qualities and is sometimes used in landscaping.',
