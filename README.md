@@ -70,7 +70,6 @@ $ yarn run start
 
 -   Author - [Naman Arora](https://namanarora.vercel.app)
 -   Twitter - [@namanarora1022](https://twitter.com/namanarora1022)
--   Website - [https://namanarora.vercel.app](https://namanarora.vercel.app)
 
 ## 🗒️ License
 
