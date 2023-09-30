@@ -26,7 +26,7 @@ India, with a rich heritage of floral diversity, is well-known for its medicinal
 ## 🪶 Features covered
 
 -   📷 Image indentification/classification of medicinal plants using machine learning of more than 170 plants.
--   🪴 Uses and useful properties of medicinal plants
+-   🪴 Uses and medicinal properties of plants
 
 ## ⚙️ Technologies used
 
@@ -73,4 +73,4 @@ $ yarn run start
 
 ## 🗒️ License
 
-Pyrus Server is [MIT licensed](LICENSE).
+Pyrus Server is [GPL V3 licensed](LICENSE).
